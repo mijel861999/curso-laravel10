@@ -21,7 +21,9 @@ class CursoController extends Controller
         if ($categoria) {
             return "Bienvenidos al curso de $curso de $categoria";
         } else {
-            return "Bienvenido al curso $curso";
+            // Otra manera
+            // return view('cursos.show', ['curso' => $curso]);
+            return view('curso.show', compact('curso'));
         }
     }
 }
